@@ -1,0 +1,20 @@
+<p>
+  add-posts works!
+</p>
+<form [formGroup] = "postsObj" (ngSubmit) = "postsAdd()">
+  <div class="foorm-group">
+    <label>Posts Title</label>
+    <input
+      type="text"
+      class="form-control"
+      formControlName="postsTitle"/>
+  </div>
+  <div class="form-group">
+    <label>Posts Author</label>
+    <input 
+      type="text"
+      class="form-control"
+      formControlName="postsAuthor" />
+  </div>
+  <button type="submit">Submit</button>
+</form>

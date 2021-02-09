@@ -1,0 +1,27 @@
+<p>
+  services works!
+</p>
+<p>
+  {{ response | json }}
+</p>
+<p>
+  <button (click) = "redirectToHome()">Home</button>
+  <button mat-raised-button color="primary" (click)="openDialog()">Add Posts</button>
+</p>
+<table border="1">
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Author</th>
+    <th>Actions</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let posts of response">
+      <td>{{ posts.id }}</td>
+      <td>{{ posts.title }}</td>
+      <td>{{ posts.author }}</td>
+      <td><button (click) = "editPosts(posts)">Edit</button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <app-table-component [objects] = "response" (deleteAction) = "deletePost($event)"></app-table-component> -->

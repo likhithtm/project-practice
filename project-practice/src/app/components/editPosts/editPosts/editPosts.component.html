@@ -1,0 +1,29 @@
+<p>
+  editPosts works!
+</p>
+<form *ngIf="showForm" [formGroup]="postsEditForm" (ngSubmit) = "updatePosts()">
+  <div class="form-group">
+    <label>Post Id</label>
+    <input 
+      type="text"
+      class="form-control"
+      formControlName="postsId"
+      readonly />
+  </div>
+  <div class="form-group">
+    <label>Post Title</label>
+    <input 
+      type="text"
+      class="form-control"
+      formControlName="postsTitle" 
+      (click) = "getPostsControl(postsEditForm)" />
+  </div>
+  <div class="form-group">
+    <label>Post Author</label>
+    <input 
+      type="text"
+      class="form-control"
+      formControlName="postsAuthor" />
+  </div>
+  <button type="submit">Update</button>
+</form>

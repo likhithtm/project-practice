@@ -1,0 +1,30 @@
+<p>
+  movies works!
+</p>
+<p>
+  Movies Id: {{ movieObjeById | json }}
+</p>
+<form *ngIf="showForm" [formGroup]="rForm" (ngSubmit) = "updateMoviesById()">
+  <div class="form-group">
+    <label>Movie Id:</label>
+    <input 
+      type="text" 
+      class="form-control"
+      formControlName="movieId" />
+  </div>
+  <div class="from-group">
+    <label>Movie Name</label>
+    <input 
+      type="text" 
+      class="form-control"
+      formControlName="movieName"
+      (click) = "formGroup(rForm)" />
+      <div>
+        <div class="alert alert-danger" 
+          *ngIf="rForm?.controls?.movieName?.errors?.minlength != null">
+          Minlength should be {{ rForm.controls.movieName.errors.minlength.requiredLength }}
+        </div>
+      </div>
+  </div>
+  <button type="submit" [disabled] = "rForm.invalid">Submit</button>
+</form>

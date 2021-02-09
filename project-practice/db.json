@@ -1,0 +1,41 @@
+{
+  "posts": [
+    {
+      "title": "post6",
+      "author": "post6author",
+      "id": 6
+    },
+    {
+      "title": "posts7",
+      "author": "posts7author",
+      "id": 7
+    },
+    {
+      "title": "tity",
+      "author": "hjghjg",
+      "id": 8
+    }
+  ],
+  "movies": [
+    {
+      "id": "5",
+      "title": "DDLJ"
+    },
+    {
+      "id": 8,
+      "title": "likhithsf"
+    },
+    {
+      "id": 9,
+      "title": "kgf chap3"
+    },
+    {
+      "id": 10,
+      "title": "KGF2"
+    },
+    {
+      "id": 11,
+      "title": "ddlj"
+    }
+  ]
+}

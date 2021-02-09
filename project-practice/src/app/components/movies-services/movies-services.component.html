@@ -1,0 +1,28 @@
+<p>
+  movies-services works!
+</p>
+<p>{{ response | json }}</p>
+<p>
+  <button (click) = "redirectToHome()">Home</button>
+</p>
+<p>
+  <button mat-raised-button color="primary" (click)="openDialog()">Add Movie</button>
+  <!-- <button></button> -->
+</p>
+<!-- <app-services></app-services> -->
+<table border="1">
+  <thead>
+    <th>Id</th>
+    <th>Title</th>
+    <th>Action</th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let movies of response">
+      <td>{{ movies.id }}</td>
+      <td>{{ movies.title }}</td>
+      <td><button (click) = "editMovies(movies)">Edit</button></td>
+      <td><button (click) = "deleteMovies(movies)">Delete</button></td>
+    </tr>
+  </tbody>
+</table>
+<!-- <app-table-component [objects] = "response" (deleteAction) = "deleteMovies($event)"></app-table-component> -->

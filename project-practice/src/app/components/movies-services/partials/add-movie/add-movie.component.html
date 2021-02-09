@@ -1,0 +1,19 @@
+<form [formGroup]="movieAddObj" (ngSubmit) = "addFormSubmit()">
+  <div class="form-group">
+    <label>Movie Id:</label>
+    <input 
+      type="text" 
+      class="form-control"
+      formControlName="movieId" 
+      name="movieId"/>
+  </div>
+  <div class="form-group">
+    <label>Movie Name</label>
+    <input 
+      type="text" 
+      class="form-control"
+      formControlName="movieName" />
+  </div>
+  <br>
+  <button type="submit" mat-raised-button color="primary" >Add Movie</button>
+</form>

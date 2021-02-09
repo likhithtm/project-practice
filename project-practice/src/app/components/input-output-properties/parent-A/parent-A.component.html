@@ -1,0 +1,10 @@
+<p>
+  parent-A works!
+</p>
+<h1>{{ value }}</h1>
+<input type="text" class="form-control" [(ngModel)]="iodata" />
+<button type="button" (click) = "iomethod()">Send</button>
+<app-child-b [parentData] = "parentToChild"  (childData) = "childToParentData($event)"></app-child-b>
+<!-- <ng-content select="selector">
+  <app-child-b [parentData] = "parentToChild"  (childData) = "childData($event)"></app-child-b>
+</ng-content> -->

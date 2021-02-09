@@ -1,0 +1,15 @@
+<p>
+  table-component works!
+</p>
+<table border="1">
+  <thead>
+    <th *ngFor="let item of objectKeys"> {{ item | uppercase}}</th>
+    <th *ngFor="let action of actionsArray"> ACTIONS </th>
+  </thead>
+  <tbody>
+    <tr *ngFor="let obj of objects">
+      <td *ngFor="let item of objectKeys">{{ obj[item] }}</td>
+      <td *ngFor="let action of actionsArray"><button (click) = "action.callback(obj, action.name)">{{ action.name }}</button></td>
+    </tr>
+  </tbody>
+</table>
